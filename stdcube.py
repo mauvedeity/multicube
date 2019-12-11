@@ -14,13 +14,15 @@ def cube(n):
   return(n*n*n)
 
 def process():
+  l = []
   for h in range(1, 10):
     for t in range(0, 10):
       for u in range(0, 10):
         n1 = (h * 100) + (t * 10) + u
         n2 = cube(h) + cube(t) + cube(u)
         if(n1 == n2):
-          print(n1)
+          l = l + [n1]
+  print(l)
 
 if __name__ == '__main__':
   process()
